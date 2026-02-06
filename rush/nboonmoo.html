@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfolio – Nattapat Boonmool</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- สไตล์เพิ่มเติม (ถ้ามีไฟล์แยก) -->
+  <link href="style.css" rel="stylesheet" />
+
+  <style>
+    html {
+      scroll-padding-top: 72px;
+    }
+
+    .gradient-1 {
+      background: linear-gradient(135deg, #0d6efd, #0dcaf0);
+    }
+
+    .section-hero {
+      padding-top: 120px;
+      padding-bottom: 80px;
+    }
+
+    .card-img-top {
+      object-fit: cover;
+      height: 200px;
+    }
+
+    .breadcrumb-item+.breadcrumb-item::before {
+      content: "←";
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">Nattapat Portfolio</a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+        aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div id="mainNav" class="collapse navbar-collapse">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="#showcase">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header class="section-hero gradient-1 text-white">
+    <div class="container py-5">
+      <div class="row align-items-center g-4">
+        <div class="col-md-4 text-center">
+          <img src="images/491461249_1692248684985711_981910055419559919_n.png"
+            class="img-fluid rounded-circle border border-3 border-light" alt="Profile avatar">
+        </div>
+
+        <div class="col-md-8">
+          <h1 class="display-5 fw-bold">Nattapat Boonmool</h1>
+          <p class="lead text-white-50 mt-3">
+            Electronic Engineering Student • Microcontroller & IoT Developer • Automation Enthusiast
+          </p>
+
+          <div class="mt-3 d-flex gap-2 flex-wrap">
+            <a class="btn btn-light btn-sm fw-bold" href="#showcase">ดูโปรเจค</a>
+            <a class="btn btn-outline-light btn-sm fw-bold" href="#contact">ติดต่อ</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- About -->
+  <section id="about" class="py-5">
+    <div class="container">
+      <h2 class="mb-4 fw-bold">About Me</h2>
+
+      <div class="row g-4">
+        <div class="col-lg-6">
+          <p>
+            สวัสดีครับ ผมชื่อ <strong>ณัฐภัทร บุญมูล</strong> เป็นนักศึกษาสาขา
+            <strong>Electronic Engineering</strong> สนใจงานด้าน
+            <strong>Microcontroller, Embedded Systems, IoT และ Automation</strong>
+          </p>
+
+          <p>
+            ผมชอบทำโปรเจคที่เกี่ยวข้องกับการวัดค่าจาก Sensor และนำข้อมูลไปควบคุมอุปกรณ์ต่าง ๆ เช่น พัดลม มอเตอร์ รีเลย์
+            รวมถึงการพัฒนา Dashboard สำหรับแสดงผลข้อมูลแบบ Real-time
+          </p>
+
+          <ul>
+            <li><strong>สาขา:</strong> Electronic Engineering</li>
+            <li><strong>ความสนใจ:</strong> Embedded System, IoT, PLC, Automation</li>
+            <li><strong>เป้าหมาย:</strong> เติบโตไปเป็น Automation / Embedded Engineer</li>
+          </ul>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="p-4 bg-light rounded-3 shadow-sm h-100">
+            <h5 class="mb-3 fw-bold">Highlights</h5>
+            <ul class="mb-0">
+              <li>มีประสบการณ์ทำโปรเจคระบบควบคุมสภาพแวดล้อมโรงเรือนสัตว์</li>
+              <li>เชื่อมต่อ Sensor หลายตัว เช่น DHT22, MQ-135, PMS5003, Anemometer</li>
+              <li>ควบคุมอุปกรณ์ผ่าน Relay, Servo, Pump, Solenoid Valve</li>
+              <li>เขียนโค้ด Arduino / ESP8266 (Wemos D1 Mini)</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="py-5 bg-body-tertiary">
+    <div class="container">
+      <h2 class="mb-4 fw-bold">Skills</h2>
+
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4">
+          <div class="p-4 bg-white rounded-3 shadow-sm h-100">
+            <h5 class="fw-bold">Programming</h5>
+            <ul class="mb-0">
+              <li>C / C++ (Arduino)</li>
+              <li>Basic Python</li>
+              <li>HTML / CSS (Basic)</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="p-4 bg-white rounded-3 shadow-sm h-100">
+            <h5 class="fw-bold">Embedded & IoT</h5>
+            <ul class="mb-0">
+              <li>ESP8266 (Wemos D1 Mini)</li>
+              <li>Sensor Integration</li>
+              <li>Relay / Servo / Motor Control</li>
+              <li>UART / I2C / SPI</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="p-4 bg-white rounded-3 shadow-sm h-100">
+            <h5 class="fw-bold">Engineering Tools</h5>
+            <ul class="mb-0">
+              <li>Basic Circuit Design</li>
+              <li>Drawing / Schematic Reading</li>
+              <li>Multimeter / Basic Electronics Testing</li>
+              <li>Git & GitHub</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Showcase -->
+  <section id="showcase" class="py-5">
+    <div class="container">
+      <h2 class="mb-4 fw-bold">Projects / Showcase</h2>
+
+      <div class="row g-4">
+
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100 shadow-sm">
+            <img src="images/1770305395058.jpg" class="card-img-top" style="object-fit: contain;" alt="Project 1">
+            <div class="card-body">
+              <h5 class="card-title fw-bold">Development of a Remote-Controlled Bomb Disposal Robot</h5>
+              <p class="card-text">
+                พัฒนาและออกแบบหุ่นยนต์กำจัดระเบิดที่ควบคุมจากระยะไกล
+                สามารถเคลื่อนที่และควบคุมแขนกลเพื่อหยิบจับวัตถุต้องสงสัยได้อย่างปลอดภัย
+                โดยใช้ระบบควบคุมแบบไร้สายและวงจรไมโครคอนโทรลเลอร์
+              </p>
+            </div>
+            <div class="card-footer bg-white d-flex gap-2">
+              <a class="btn btn-sm btn-primary" href="#" target="_blank" rel="noopener">รายละเอียด</a>
+              <a class="btn btn-sm btn-outline-primary" href="#" target="_blank" rel="noopener">Source Code</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100 shadow-sm">
+            <img src="images/received_908806040775377.jpg" class="card-img-top" alt="Project 2">
+            <div class="card-body">
+              <h5 class="card-title fw-bold">Power Supply Project</h5>
+              <p class="card-text">
+                ออกแบบและสร้างวงจร Power Supply สำหรับจ่ายไฟให้กับอุปกรณ์อิเล็กทรอนิกส์ โดยแปลงไฟ AC เป็น DC
+                พร้อมระบบปรับแรงดันและกรองสัญญาณรบกวน
+                เพื่อให้ได้แรงดันคงที่และปลอดภัยต่อการใช้งานในงานไมโครคอนโทรลเลอร์และวงจรทดลองต่าง ๆ
+              </p>
+            </div>
+            <div class="card-footer bg-white d-flex gap-2">
+              <a class="btn btn-sm btn-primary" href="#" target="_blank" rel="noopener">รายละเอียด</a>
+              <a class="btn btn-sm btn-outline-primary" href="#" target="_blank" rel="noopener">Source Code</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100 shadow-sm">
+            <img src="images/received_1254675719295647.jpg" class="card-img-top" alt="Project 3">
+            <div class="card-body">
+              <h5 class="card-title fw-bold">Schematic Project</h5>
+              <p class="card-text">
+                ออกแบบและจัดทำ Schematic Diagram สำหรับวงจรอิเล็กทรอนิกส์
+                โดยวางตำแหน่งอุปกรณ์และการเชื่อมต่อให้ถูกต้องตามมาตรฐาน
+                เพื่อใช้ในการประกอบวงจรจริงและตรวจสอบการทำงานก่อนผลิตหรือทดลองใช้งาน
+              </p>
+            </div>
+            <div class="card-footer bg-white d-flex gap-2">
+              <a class="btn btn-sm btn-primary" href="#" target="_blank" rel="noopener">รายละเอียด</a>
+              <a class="btn btn-sm btn-outline-primary" href="#" target="_blank" rel="noopener">Source Code</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-5 bg-body-tertiary">
+    <div class="container">
+      <h2 class="mb-4 fw-bold">Contact</h2>
+
+      <div class="row g-4">
+        <div class="col-md-6">
+          <p>สามารถติดต่อผมได้ผ่านช่องทางด้านล่าง:</p>
+          <ul class="list-unstyled">
+            <li>📧 Email: <a href="mailto:65010317@kmitl.ac.th">65010317@kmitl.ac.th</a></li>
+            <li>🐙 GitHub: <a href="https://github.com/65010317" target="_blank" rel="noopener">github.com/65010317</a>
+            </li>
+            <li>📱 Phone: <a href="tel:0808073540">+66 80-807-3540</a></li>
+          </ul>
+          <p class="text-muted small">
+          </p>
+        </div>
+
+        <div class="col-md-6">
+          <div class="p-4 bg-white rounded-3 shadow-sm">
+            <h5 class="fw-bold">My Goal</h5>
+            <p class="mb-0">
+              ต้องการพัฒนาทักษะด้าน Embedded และ Automation เพื่อทำงานในสาย
+              Industrial Automation / Smart Factory / IoT Engineering
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="container d-flex justify-content-center my-4">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a
+            class="link-secondary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+            href="rtrachoo.html">Page 1</a></li>
+        <li class="breadcrumb-item active" aria-current="page"><a
+            class="link-primary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+            href="teammate.html">Page 2</a></li>
+      </ol>
+    </nav>
+  </div>
+
+  <!-- Footer -->
+  <footer class="py-4 text-center bg-dark text-white">
+    <small>© 2026 Nattapat Boonmool | Electronic Engineering Portfolio</small>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
