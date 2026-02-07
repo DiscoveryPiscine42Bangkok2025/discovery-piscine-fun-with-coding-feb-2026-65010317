@@ -1,0 +1,30 @@
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+.table-container {
+  width: 100%;
+  height: 100%;
+}
+
+table {
+  width: 100%;
+  height: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;   /* สำคัญมาก ทำให้ตาราง shrink ได้ */
+}
+
+td {
+  border: 1px solid black;
+  text-align: center;
+  font-size: 2vw;        /* responsive font */
+  word-wrap: break-word; /* ป้องกัน text ล้น */
+}
+
+/* ตัวอย่างสี */
+.box1 { background: lightblue; }
+.box2 { background: lightcoral; }
+.box3 { background: lightgreen; }
+.box4 { background: lightyellow; }

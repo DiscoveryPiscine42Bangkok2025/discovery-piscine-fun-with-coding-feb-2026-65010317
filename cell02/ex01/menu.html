@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SNCF Sandwich</title>
+
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+    }
+
+    /* Main menu box */
+    .menu {
+      position: relative;
+      width: 280px;
+      text-align: center;
+    }
+
+    /* Button style */
+    .menu-btn {
+      background: #d62828;
+      color: white;
+      padding: 15px;
+      border-radius: 12px;
+      font-size: 20px;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+      transition: 0.3s;
+    }
+
+    .menu-btn:hover {
+      background: #b81f1f;
+      transform: scale(1.03);
+    }
+
+    /* Dropdown box hidden by default */
+    .dropdown {
+      display: none;
+      position: absolute;
+      top: 65px;
+      left: 0;
+      width: 100%;
+      background: white;
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 8px 18px rgba(0,0,0,0.25);
+    }
+
+    /* Show dropdown on hover */
+    .menu:hover .dropdown {
+      display: block;
+    }
+
+    /* Dropdown items */
+    .dropdown a {
+      display: block;
+      padding: 14px;
+      text-decoration: none;
+      color: #333;
+      font-size: 18px;
+      transition: 0.2s;
+    }
+
+    .dropdown a:hover {
+      background: #ffe5d9;
+      color: #d62828;
+      font-weight: bold;
+    }
+
+    /* small sandwich icon style */
+    .icon {
+      font-size: 22px;
+      margin-right: 8px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="menu">
+    <div class="menu-btn">🥪 SNCF Sandwich Menu</div>
+
+    <div class="dropdown">
+      <a href="#"><span class="icon">🍞</span>Bread</a>
+      <a href="#"><span class="icon">🧀</span>Cheese</a>
+      <a href="#"><span class="icon">🥓</span>Ham</a>
+      <a href="#"><span class="icon">🥬</span>Lettuce</a>
+      <a href="#"><span class="icon">🥒</span>Pickles</a>
+      <a href="#"><span class="icon">🥫</span>Mustard Sauce</a>
+    </div>
+  </div>
+
+</body>
+</html>

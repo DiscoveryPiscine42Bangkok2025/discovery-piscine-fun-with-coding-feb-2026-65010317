@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, sans-serif;
+      background: #f2f2f2;
+    }
+
+    .calc {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+
+    input, select {
+      padding: 10px;
+      font-size: 16px;
+    }
+
+    input[type="submit"] {
+      background: black;
+      color: white;
+      cursor: pointer;
+      border: none;
+      border-radius: 8px;
+      padding: 10px 15px;
+    }
+
+    input[type="submit"]:hover {
+      opacity: 0.8;
+    }
+  </style>
+</head>
+
+<body>
+
+  <form class="calc" id="calcForm">
+    <input type="text" id="left" placeholder="Left" />
+    
+    <select id="operator">
+      <option value="+">+</option>
+      <option value="-">-</option>
+      <option value="*">*</option>
+      <option value="/">/</option>
+      <option value="%">%</option>
+    </select>
+
+    <input type="text" id="right" placeholder="Right" />
+
+    <input type="submit" value="Try me!" />
+  </form>
+
+  <script>
+    const form = document.getElementById("calcForm");
+    const leftInput = document.getElementById("left");
+    const rightInput = document.getElementById("right");
+    const operator = document.getElementById("operator");
+
+    // Alert every 30 seconds
+    setInterval(() => {
+      alert("Please, use me...");
+    }, 30000);
+
+    function isPositiveInteger(value) {
+      return /^\d+$/.test(value);
+    }
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const leftValue = leftInput.value.trim();
+      const rightValue = rightInput.value.trim();
+
+      if (!isPositiveInteger(leftValue) || !isPositiveInteger(rightValue)) {
+        alert("Error :(");
+        console.log("Error :(");
+        return;
+      }
+
+      const a = parseInt(leftValue, 10);
+      const b = parseInt(rightValue, 10);
+      const op = operator.value;
+
+      // Division or modulo by zero
+      if ((op === "/" || op === "%") && b === 0) {
+        alert("It’s over 9000!");
+        console.log("It’s over 9000!");
+        return;
+      }
+
+      let result;
+
+      if (op === "+") result = a + b;
+      else if (op === "-") result = a - b;
+      else if (op === "*") result = a * b;
+      else if (op === "/") result = a / b;
+      else if (op === "%") result = a % b;
+
+      alert(result);
+      console.log(result);
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Parallax Page</title>
+
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Parallax section */
+    .parallax {
+      height: 100vh;
+      background-attachment: fixed; /* ทำให้ parallax */
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* ข้อความตรงกลาง */
+    .message {
+      background: rgba(0, 0, 0, 0.55);
+      color: white;
+      padding: 20px 40px;
+      border-radius: 12px;
+      font-size: 28px;
+      text-align: center;
+      letter-spacing: 1px;
+    }
+
+    /* Black block section */
+    .black-block {
+      height: 50vh;
+      background: black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-size: 24px;
+      text-align: center;
+      padding: 20px;
+    }
+
+    /* Image 1 */
+    .img1 {
+      background-image: url("images/image1.jpg");
+    }
+
+    /* Image 2 */
+    .img2 {
+      background-image: url("images/image2.jpg");
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- First Parallax Image -->
+  <div class="parallax img1">
+    </div>
+  </div>
+
+  <!-- Black block -->
+  <div class="black-block">
+  </div>
+
+  <!-- Second Parallax Image -->
+  <div class="parallax img2">
+    </div>
+  </div>
+
+</body>
+</html>
