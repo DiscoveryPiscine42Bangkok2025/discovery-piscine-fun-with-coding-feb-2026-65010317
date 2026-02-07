@@ -1,25 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Responsive Table</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        table{
+            border-collapse: collapse;
+            width: 100%;
+            height: 100%;
+            table-layout: fixed;
+        }
+
+        td{
+            border: 1px solid black;
+            padding:20px;
+        }
+
+        .c1{
+            background-color: red;
+        }
+
+        .c2{
+            background-color: green;
+        }
+
+        .c3{
+            background-color: blue;
+        }
+
+        .c4{
+            background-color: yellow;
+        }
+
+        .c5{
+            background-color: gray;
+        }
+        
+
+    </style>
 </head>
 <body>
-
-  <div class="table-container">
     <table>
-      <tr>
-        <td class="box1">Cell 1</td>
-        <td class="box2">Cell 2</td>
-      </tr>
-      <tr>
-        <td class="box3">Cell 3</td>
-        <td class="box4">Cell 4</td>
-      </tr>
+        <td class="c1">Cell 1</td>
+        <td class="c2">Cell 2</td>
+        <td class="c3">Cell 3</td>
+        <td class="c4">Cell 4</td>
+        <td class="c5">Cell 5</td>
     </table>
-  </div>
-
 </body>
 </html>

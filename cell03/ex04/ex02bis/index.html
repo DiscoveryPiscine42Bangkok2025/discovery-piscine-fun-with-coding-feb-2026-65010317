@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial;
+    }
+
+    .calc {
+      padding: 20px;
+      border: 2px solid black;
+    }
+
+    input, select {
+      padding: 5px;
+      font-size: 16px;
+      margin: 5px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="calc">
+    <input type="text" id="left">
+    <select id="op">
+      <option value="+">+</option>
+      <option value="-">-</option>
+      <option value="*">*</option>
+      <option value="/">/</option>
+      <option value="%">%</option>
+    </select>
+    <input type="text" id="right">
+    <input type="submit" value="Try me!" id="btn">
+  </div>
+
+  <script>
+    function isPositiveInteger(value) {
+      return /^\d+$/.test(value);
+    }
+
+    $("#btn").click(function () {
+      let left = $("#left").val();
+      let right = $("#right").val();
+      let op = $("#op").val();
+
+      if (!isPositiveInteger(left) || !isPositiveInteger(right)) {
+        alert("Error :(");
+        console.log("Error :(");
+        return;
+      }
+
+      let a = parseInt(left);
+      let b = parseInt(right);
+      let result;
+
+      if ((op === "/" || op === "%") && b === 0) {
+        alert("It’s over 9000!");
+        console.log("It’s over 9000!");
+        return;
+      }
+
+      if (op === "+") result = a + b;
+      if (op === "-") result = a - b;
+      if (op === "*") result = a * b;
+      if (op === "/") result = a / b;
+      if (op === "%") result = a % b;
+
+      alert(result);
+      console.log(result);
+    });
+
+    setInterval(function () {
+      alert("Please, use me...");
+    }, 30000);
+  </script>
+
+</body>
+</html>

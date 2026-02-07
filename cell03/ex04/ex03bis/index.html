@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SNCF Sandwich</title>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial;
+      background: #f2f2f2;
+    }
+
+    .dropdown {
+      width: 250px;
+      position: relative;
+      text-align: center;
+    }
+
+    .btn {
+      background: black;
+      color: white;
+      padding: 15px;
+      cursor: pointer;
+      border-radius: 5px;
+      font-size: 18px;
+    }
+
+    .menu {
+      display: none;
+      background: white;
+      border: 1px solid black;
+      border-radius: 5px;
+      margin-top: 5px;
+      overflow: hidden;
+    }
+
+    .menu div {
+      padding: 12px;
+      cursor: pointer;
+    }
+
+    .menu div:hover {
+      background: lightgray;
+    }
+
+    .result {
+      margin-top: 20px;
+      font-weight: bold;
+      font-size: 18px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="dropdown">
+    <div class="btn">🥪 Choose your SNCF Sandwich</div>
+
+    <div class="menu">
+      <div data-item="Ham & Cheese">Ham & Cheese</div>
+      <div data-item="Chicken Sandwich">Chicken Sandwich</div>
+      <div data-item="Tuna Sandwich">Tuna Sandwich</div>
+      <div data-item="Veggie Sandwich">Veggie Sandwich</div>
+    </div>
+
+    <div class="result">Nothing selected</div>
+  </div>
+
+  <script>
+    $(".btn").click(function () {
+      $(".menu").slideToggle();
+    });
+
+    $(".menu div").click(function () {
+      let choice = $(this).data("item");
+      $(".result").text("You chose: " + choice);
+      $(".menu").slideUp();
+    });
+  </script>
+
+</body>
+</html>
